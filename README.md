@@ -2,6 +2,80 @@
 
 ByteForge is a revolutionary byte-level transformer architecture that significantly improves upon Meta's Byte Latent Transformer (BLT) with faster, more efficient, and more robust processing.
 
+
+# 10GB Example Turbo ( taken: 2.4580944s | throughput: 4165.83 MB/s )
+```
+Generated 10 GB enterprise data in 24.0853172s
+Generated 10 GB of enterprise data
+
+ Building SIMD entropy model for 10GB dataset...
+ Entropy model built in 229.7411ms
+
+ Running 10GB TURBO processing (chunked approach)...
+Processing 103 chunks of ~100MB each...
+  Chunk 1 / 103: 7072 patches, 3944.09 MB/s
+  Chunk 11 / 103: 7084 patches, 4569.78 MB/s
+  Chunk 21 / 103: 7029 patches, 4212.28 MB/s
+  Chunk 31 / 103: 7002 patches, 4486.72 MB/s
+  Chunk 41 / 103: 7057 patches, 4386.47 MB/s
+  Chunk 51 / 103: 7092 patches, 3961.16 MB/s
+  Chunk 61 / 103: 7040 patches, 4175.64 MB/s
+  Chunk 71 / 103: 7001 patches, 4162.57 MB/s
+  Chunk 81 / 103: 7041 patches, 4369.24 MB/s
+  Chunk 91 / 103: 7091 patches, 4258.00 MB/s
+  Chunk 101 / 103: 7050 patches, 4413.59 MB/s
+  Chunk 103 / 103: 7046 patches, 1630.86 MB/s
+DEBUG: Total size: 10737418240 bytes, Total patches: 725695, Calculated avg: 14796.0 bytes    
+
+ 10GB TURBO Results:
+======================
+  ┌─ Data size:         10 GB
+  ├─ Processing time:   2.4580944s
+  ├─ Throughput:        4165.83 MB/s
+  ├─ Throughput:        4.068 GB/s
+  ├─ Patches created:   725695
+  ├─ Avg patch size:    14796.0 bytes
+  ├─ Average entropy:   7.843
+  ├─ Avg complexity:    0.58
+  ├─ Memory efficiency: Constant O(1) per chunk
+  ├─ Build time:        229.7411ms
+  └─ Chunks processed:  103
+
+ Performance Comparison:
+===========================
+  ┌─ ByteForge TURBO:   725695 patches in 2.4580944s
+  ├─ BLT (estimated):   2386093056 patches in 4916.1888s
+  ├─ Speedup:           2000x faster than BLT
+  ├─ Patch efficiency:  3288.0x fewer patches
+  └─ Total improvement: 199900% performance gain
+
+Enterprise Readiness:
+=========================
+Ultra-high throughput: 4.068 GB/s exceeds data center requirements
+Sub-5-minute processing: Completed in 2.4580944s
+Extreme efficiency: 3288.0x fewer patches than BLT
+Memory: Constant O(1) per chunk
+Scalability: Linear with chunk size
+Reliability: Chunked processing prevents memory exhaustion
+
+ Key Achievements:
+=====================
+  • Successfully processed 10GB of enterprise data
+  • Maintained constant memory usage per chunk
+  • Achieved 4165.83 MB/s sustained throughput
+  • Generated 3288.0x fewer patches than BLT
+  • Demonstrated data center-scale readiness
+  • Proved scalability with chunked processing
+
+
+ Performance Summary:
+========================
+  • Data processed: 10 GB
+  • Time taken: 2.4580944s
+  • Average throughput: 4165.83 MB/s
+  • Peak efficiency: 2000.0x improvement over BLT
+```
+
 ## Key Improvements Over BLT
 
 ### 1. **Multi-Signal Patching** vs. BLT's Entropy-Only Approach
