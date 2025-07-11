@@ -3,6 +3,9 @@
 ByteForge is a revolutionary byte-level transformer architecture that significantly improves upon Meta's Byte Latent Transformer (BLT) with faster, more efficient, and more robust processing.
 
 
+# Rust Crate
+[byteforge crate](https://crates.io/crates/byteforge)
+
 # 10GB Example Turbo ( taken: 2.4580944s | throughput: 4165.83 MB/s )
 ```
 Generated 10 GB enterprise data in 24.0853172s
