@@ -1,0 +1,43 @@
+[package]
+name = "byteforge"
+version = "0.1.0"
+edition = "2024"
+authors = ["0x251"]
+description = "A next-generation byte-level transformer with multi-signal patching and SIMD optimization"
+documentation = "https://docs.rs/byteforge"
+homepage = "https://github.com/0x251/byteforge"
+repository = "https://github.com/0x251/byteforge"
+license = "MIT"
+readme = "README.md"
+keywords = ["transformer", "nlp", "byte-level", "simd", "performance", "byteforge"]
+categories = ["algorithms", "science", "text-processing"]
+exclude = [
+    "target/*",
+    ".github/*",
+    "*.png",
+    "*.jpg",
+    "benchmark_results.txt"
+]
+
+[dependencies]
+rayon = "1.7"
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+ndarray = "0.15"
+memmap2 = "0.9"
+fnv = "1.0"
+ahash = "0.8"
+byteorder = "1.5"
+thiserror = "1.0"
+clap = { version = "4.0", features = ["derive"] }
+plotters = "0.3"
+csv = "1.0"
+chrono = { version = "0.4", features = ["serde"] }
+wide = "0.7"  # SIMD operations
+memchr = "2.7"  # Fast byte searching
+
+[profile.release]
+opt-level = 3
+lto = true
+codegen-units = 1
+panic = "abort" 
